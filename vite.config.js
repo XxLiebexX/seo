@@ -7,8 +7,8 @@ export default defineConfig({
   resolve: { alias: { '@': path.resolve(__dirname, 'src') } },
   server: {
     port: 5173,
-    // In dev the API runs on :8000; in production FastAPI serves this build on the same origin.
-    proxy: { '/api': { target: 'http://localhost:8000', changeOrigin: true } },
+    // In dev the API runs on :8001; in production FastAPI serves this build on the same origin.
+    proxy: { '/api': { target: 'http://localhost:8001', changeOrigin: true } },
   },
   build: { sourcemap: false, chunkSizeWarningLimit: 700 },
   test: {

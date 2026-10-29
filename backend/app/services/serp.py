@@ -118,7 +118,17 @@ def _ddg_sync(keyword: str, country: str) -> list[dict]:
         from ddgs import DDGS  # newer package name
     except ImportError:
         from duckduckgo_search import DDGS
-    return list(DDGS().text(keyword, region=f"{country.lower()}-en", max_results=20))
+    region = f"{country.lower()}-en"
+    try:
+        res = list(DDGS().text(keyword, region=region, max_results=20))
+        if res:
+            return res
+    except Exception:
+        pass
+    try:
+        return list(DDGS().text(keyword, max_results=20))
+    except Exception:
+        return []
 
 
 async def _duckduckgo(keyword: str, country: str, settings: Settings) -> SerpData:
