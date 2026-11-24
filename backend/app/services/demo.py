@@ -2,7 +2,12 @@
 
 import json
 import logging
-from datetime import UTC, datetime
+from datetime import datetime, timezone
+
+try:
+    from datetime import UTC
+except ImportError:
+    UTC = timezone.utc
 from functools import lru_cache
 from pathlib import Path
 

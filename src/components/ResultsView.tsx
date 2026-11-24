@@ -68,13 +68,13 @@ export function ResultsView({ result }: { result: AnalysisResult }) {
     <div className="space-y-10">
       <nav
         aria-label="On this page"
-        className="sticky top-14 z-30 -mx-1 flex gap-1 overflow-x-auto rounded-lg border bg-background/95 p-1 shadow-sm backdrop-blur print:hidden"
+        className="sticky top-16 z-30 -mx-1 flex gap-1.5 overflow-x-auto rounded-2xl border border-border/70 bg-background/80 p-1.5 shadow-md shadow-black/5 backdrop-blur-xl print:hidden"
       >
         {NAV.map(([id, label]) => (
           <a
             key={id}
             href={`#${id}`}
-            className="whitespace-nowrap rounded-md px-3 py-1.5 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground"
+            className="whitespace-nowrap rounded-xl px-3.5 py-1.5 text-xs sm:text-sm font-medium text-muted-foreground transition-all duration-150 hover:bg-primary/10 hover:text-primary active:scale-95"
           >
             {label}
           </a>

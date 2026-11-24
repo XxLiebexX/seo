@@ -3,7 +3,12 @@
 import json
 import logging
 import sys
-from datetime import UTC, datetime
+from datetime import datetime, timezone
+
+try:
+    from datetime import UTC
+except ImportError:
+    UTC = timezone.utc
 
 
 class JsonFormatter(logging.Formatter):

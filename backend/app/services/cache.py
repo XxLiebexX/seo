@@ -1,7 +1,12 @@
 """SQLite-backed cache for SERP and scrape results (keyed per keyword/country/day)."""
 
 import hashlib
-from datetime import UTC, datetime
+from datetime import datetime, timezone
+
+try:
+    from datetime import UTC
+except ImportError:
+    UTC = timezone.utc
 
 from sqlalchemy.orm import Session
 
