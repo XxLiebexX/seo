@@ -1,8 +1,7 @@
 import { useState } from 'react'
 import { Link, NavLink, Outlet } from 'react-router-dom'
-import { Menu, X, Sparkles, ExternalLink, Cpu } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 import { ThemeToggle } from '@/components/ThemeToggle'
-import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 
@@ -57,9 +56,6 @@ export function Layout() {
               <SeoulLogo className="transition-transform duration-300 group-hover:rotate-12" />
               <div className="flex items-center gap-2">
                 <span className="text-xl font-extrabold tracking-tight">Seoul</span>
-                <Badge variant="gradient" className="hidden sm:inline-flex text-[10px] px-2 py-0 h-4.5">
-                  <Sparkles className="size-2.5" /> RAG SEO
-                </Badge>
               </div>
             </Link>
           </div>
@@ -86,19 +82,7 @@ export function Layout() {
               ))}
             </nav>
 
-            <div className="mx-2 h-4 w-px bg-border/60" />
-
-            <div className="flex items-center gap-1.5">
-              <a
-                href="/api/docs"
-                target="_blank"
-                rel="noreferrer"
-                className="hidden lg:inline-flex items-center gap-1 text-xs text-muted-foreground hover:text-foreground px-2 py-1.5 rounded-lg transition-colors hover:bg-muted"
-                title="View OpenAPI documentation"
-              >
-                <Cpu className="size-3.5" /> API
-                <ExternalLink className="size-3 opacity-60" />
-              </a>
+            <div className="flex items-center gap-1.5 ml-2">
               <ThemeToggle />
             </div>
           </div>
@@ -140,15 +124,6 @@ export function Layout() {
                   {label}
                 </NavLink>
               ))}
-              <a
-                href="/api/docs"
-                target="_blank"
-                rel="noreferrer"
-                className="flex items-center justify-between rounded-xl px-4 py-2.5 text-sm font-medium text-muted-foreground hover:bg-muted hover:text-foreground"
-              >
-                <span>FastAPI Swagger Docs</span>
-                <ExternalLink className="size-3.5" />
-              </a>
             </nav>
           </div>
         )}
