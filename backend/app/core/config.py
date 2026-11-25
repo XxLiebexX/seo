@@ -26,7 +26,7 @@ class Settings(BaseSettings):
     serp_timeout: float = 10.0
     scrape_timeout: float = 8.0
     scrape_concurrency: int = 5
-    min_pages: int = 4
+    min_pages: int = 2
     min_page_words: int = 150
     max_page_bytes: int = 2_000_000
     serp_results: int = 10

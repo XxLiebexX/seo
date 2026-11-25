@@ -5,13 +5,11 @@ import {
   Link2,
   Loader2,
   Search,
-  ShieldCheck,
   Play,
   Sparkles,
   Wand2,
   Clock,
   CheckCircle2,
-  Layers,
   ArrowRight,
 } from 'lucide-react'
 import { useEffect, useState, type FormEvent } from 'react'
@@ -136,21 +134,6 @@ export default function AnalyzerPage() {
           Seoul fetches Google’s top ranking pages in real time, computes semantic vector gaps, and tells you exactly what to write — backed by source citations.
         </p>
 
-        {/* Feature Highlights */}
-        <div className="mt-6 flex flex-wrap items-center justify-center gap-3 text-xs sm:text-sm text-muted-foreground">
-          <div className="flex items-center gap-1.5 rounded-full bg-card/70 border border-border/60 px-3 py-1 shadow-xs">
-            <Search className="size-3.5 text-primary" aria-hidden="true" />
-            <span>Reads top 10 SERP</span>
-          </div>
-          <div className="flex items-center gap-1.5 rounded-full bg-card/70 border border-border/60 px-3 py-1 shadow-xs">
-            <Layers className="size-3.5 text-indigo-500" aria-hidden="true" />
-            <span>Finds gaps with RAG</span>
-          </div>
-          <div className="flex items-center gap-1.5 rounded-full bg-card/70 border border-border/60 px-3 py-1 shadow-xs">
-            <ShieldCheck className="size-3.5 text-emerald-500" aria-hidden="true" />
-            <span>Cites every suggestion</span>
-          </div>
-        </div>
 
         {/* Instant Demo Launcher */}
         <div className="mt-6 flex flex-col items-center gap-2">
